@@ -101,7 +101,8 @@ while True:
             else:
                 if len(shuffled) > 0:   
                     players[i].append(shuffled[-1])
-                    cplayers[i].append(players[i][-1][0]) 
+                    cplayers[i].append(players[i][-1][0])
+                    shuffled.pop(-1)
                     print("Card was not found. A card is drawn into your hand and the next player takes their turn.")
                 else:
                     print("Card was not found but also couldn't be drawn because deck is empty!")
@@ -118,4 +119,5 @@ while True:
     for r in range(player_count):
         results +=f"Score for Player {k}: {scores[i]}\n"
     print(results)
+
     break
